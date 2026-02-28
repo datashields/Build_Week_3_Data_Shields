@@ -34,7 +34,7 @@ Configuration validation and vulnerability analysis:
 
 ---
 
-*🇮🇹 Versione Italiana*
+*Versione Italiana*
 
 ## Panoramica
 Questo repository documenta l'analisi completa di campioni malware e traffico di rete all'interno di un ambiente controllato. Le operazioni riflettono i flussi di lavoro di un Security Operations Center (SOC), adottando un rigoroso approccio safe-by-design tramite l'utilizzo di macchine virtuali isolate e limitazioni allo scambio di dati per prevenire fughe di codice malevolo. L'obiettivo dell'archivio è mappare la superficie di attacco e documentare gli Indicatori di Compromissione (IoC).
