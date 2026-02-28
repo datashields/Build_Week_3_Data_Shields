@@ -37,4 +37,31 @@ Configuration validation and vulnerability analysis:
 *🇮🇹 Versione Italiana*
 
 ## Panoramica
-Questo
+Questo repository documenta l'analisi completa di campioni malware e traffico di rete all'interno di un ambiente controllato. Le operazioni riflettono i flussi di lavoro di un Security Operations Center (SOC), adottando un rigoroso approccio safe-by-design tramite l'utilizzo di macchine virtuali isolate e limitazioni allo scambio di dati per prevenire fughe di codice malevolo. L'obiettivo dell'archivio è mappare la superficie di attacco e documentare gli Indicatori di Compromissione (IoC).
+
+## Aree Operative del SOC (Struttura Directory)
+
+### 1. Threat Intelligence & Malware Analysis
+Indagine sui vettori di compromissione e reverse engineering comportamentale:
+* **Analisi Dinamica Scareware:** Valutazione di rogue security software che simula infezioni fittizie.
+* **Infostealer Avanzati (Vidar/Lumma):** Tracciamento di infezioni multi-stadio che utilizzano il Process Hollowing (RegAsm.exe). 
+* **Analisi Statica (Mydoom):** Ricostruzione della logica operativa del worm, meccanismi SMTP e tecniche di offuscamento (ROT13).
+
+### 2. Network Security Monitoring (NSM) & Forensics
+Intercettazione e dissezione dei flussi di rete:
+* **Network Forensics:** Analisi PCAP per l'estrazione diretta di file eseguibili (es. W32.Nimda.Amm.exe).
+* **Analisi Crittografica:** HTTP (in chiaro) vs HTTPS (cifratura TLSv1.3).
+* **Classificazione del Traffico:** Standard della 5-tupla per regole di firewalling.
+* **Rilevamento Esfiltrazioni:** Blind SQL Injection ed esfiltrazione dati occulta via DNS.
+
+### 3. Incident Response & Phishing Remediation
+Risposta agli incidenti e contenimento:
+* **Credential Harvesting:** Campagne phishing (ConvertKit-Meta) e abuso OAuth.
+* **Strategie di Bonifica:** Metodologie identity-centric e revoca token di sessione.
+* **Bonifica Endpoint:** Rimozione manuale della persistenza (Registry di Windows).
+
+### 4. System Hardening & Vulnerability Research
+Validazione delle configurazioni e analisi delle vulnerabilità:
+* **Architettura Linux:** Mount point, permessi (`chmod`), e link simbolici vs hard link.
+* **Mappatura Servizi:** Correlazione porte/processi (`netstat`, `ps`).
+* **Exploit Development (Teorico):** Cracking Buffer Overflow stack-based (fuzzing, EIP offset, JMP ESP).
