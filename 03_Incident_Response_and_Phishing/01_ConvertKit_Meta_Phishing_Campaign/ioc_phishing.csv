@@ -1,0 +1,6 @@
+Type,Indicator,Description
+URL,hxxps://meta-security-update[.]com/login,Portale malevolo per il furto di credenziali Meta
+Domain,meta-security-update[.]com,Dominio registrato dall'attaccante per il credential harvesting
+Domain,ck-mail[.]convertkit[.]com,Dominio mittente legittimo abusato per il bypass dei filtri antispam
+Email_Address,security@facebookmail[.]com,Indirizzo spoofato visualizzato nell'header 'From' (Display Name)
+IP_Address,192.168.100.50,IP del server di hosting del finto portale Meta (Sostituire con IP reale se noto)
